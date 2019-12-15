@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--bootstrap 4 stylesheets-->
+    <title>صفحه وب من</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../assets/css/jquery.simpleTicker.css">
+    <link href="https://cdn.rawgit.com/rastikerdar/sahel-font/v3.2.1/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!--bootstrap 4 javascript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="../assets/js/jquery.simpleTicker.js"></script>
+    <script src="../assets/js/custom-js.js"></script>
+</head>
+<body>
+<div class="sm-device-menu position-fixed position-relative">
+    <div class="text-center bg-dark position-relative" style="height: 76px">
+        <p class="text-white pt-3" style="font-size: 12px">خوش آمدید </p>
+        <img class="rounded-circle position-absolute" style="top: 41px;left: 45px;" src="../assets/img/favicon.png"  width="54" height="54">
+    </div>
+    <ul class="list-group sm-device-menu-item mt-5">
+        <li class="list-group-item">
+            <a href="#"><i class="material-icons m-icon ml-2">comment</i>نظرات</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#"><i class="material-icons m-icon ml-2">border_color</i>ارسال مطلب</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#"><i class="material-icons m-icon ml-2">how_to_reg</i>پروفایل</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#"><i class="material-icons m-icon ml-2">dashboard</i>پنل مدیریت</a>
+        </li>
+
+    </ul>
+    <div class="btn-toggle position-absolute rounded-left">
+        <i class="material-icons text-white" id="chevron_left">
+            chevron_left
+        </i>
+    </div>
+</div>
+<!--main menu-->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <a href="#" class="navbar-brand"><img src="../assets/img/logo.png" width="54" height="54"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav ">
+            <li class="nav-item">
+                <a href="#" class="nav-link dropdown-toggle c" data-toggle="dropdown">دوره های آموزشی</a>
+                <div class="dropdown-menu" id="custom-main-dropdown-menu">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <div class="alert alert-light text-center">
+                                    دوره های جدید
+                                </div>
+                                <div class="text-center" style="vertical-align: -8px;color: #fff"><i
+                                        style="vertical-align: -8px;" class="material-icons">
+                                    av_timer
+                                </i>همه دوره ها
+                                </div>
+                                <ul class="list-group px-0 " id="sub-menu-list-group">
+                                    <li class="list-group-item border-0"><i class="material-icons">
+                                        keyboard_arrow_left
+                                    </i><a href="#">دوره آموزش وب</a></li>
+                                    <li class="list-group-item border-0"><i class="material-icons">
+                                        keyboard_arrow_left
+                                    </i><a href="#">دوره آموزش وب</a></li>
+                                    <li class="list-group-item border-0"><i class="material-icons">
+                                        keyboard_arrow_left
+                                    </i><a href="#">دوره آموزش وب</a></li>
+                                    <li class="list-group-item border-0"><i class="material-icons">
+                                        keyboard_arrow_left
+                                    </i><a href="#">دوره آموزش وب</a></li>
+                                    <li class="list-group-item border-0"><i class="material-icons">
+                                        keyboard_arrow_left
+                                    </i><a href="#">دوره آموزش وب</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="alert alert-light text-center">
+                                    دوره های آموزشی
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="alert alert-light text-center">
+                                    جدیترین دور های آموزشی
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <i class="material-icons menu-item-divider">
+                more_vert</i>
+            <li class="nav-item">
+                <a href="#" class="nav-link">تماس با ما</a>
+            </li>
+            <i class="material-icons menu-item-divider">
+                more_vert
+            </i>
+            <li class="nav-item">
+                <a href="#" class="nav-link">درباره ما</a>
+            </li>
+        </ul>
+        <div class="mr-auto">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle mt-2" data-toggle="dropdown">
+                        <i class="material-icons m-settings-icon">settings</i>
+                    </a>
+                    <div class="dropdown-menu border-right-0 border-left-0" id="custom-dropdown-menu">
+                        <a href="#" class="dropdown-item"><i class="material-icons m-icon ml-2">comment</i>نظرات</a>
+                        <a href="#" class="dropdown-item"><i class="material-icons m-icon ml-2">border_color</i>ارسال
+                            مطلب</a>
+                        <a href="#" class="dropdown-item"><i class="material-icons m-icon ml-2">how_to_reg</i>پروفایل
+                            کاربری</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="material-icons m-icon ml-2">dashboard</i>پنل
+                            مدیریت</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                        <img class="menu-avatar rounded-circle border-light" src="../assets/img/favicon.png"  width="54" height="54"><span
+                            class="mr-2">پروفایل</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">پروفایل شما</a>
+                        <a href="#" class="dropdown-item">دوره های شما</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">ارسال تیکت</a>
+                    </div>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+</nav>
+<!--top header-->
+<div class="container-fluid" id="custom-container-fluid">
+    <div class="cover-header"></div>
+    <div class="container-fluid" id="custom-top-menu-container">
+        <div class="row">
+            <div class="col-12 col-md-6 d-none d-sm-block">
+                <div class="top-title">
+                    <div id="demo" class="ticker">
+                        <ul>
+                            <li>برگزار کننده دوره های مبتنی بر وب</li>
+                            <li>آموزش 0 تا 100 طراحی وب</li>
+                            <li>آموزش زبان های سمت سرور</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="social-icon float-left" style="direction:ltr">
+                    <a href="#"><img src="../assets/img/facebook.png"></a>
+                    <a href="#"><img src="../assets/img/google-plus.png"></a>
+                    <a href="#"><img src="../assets/img/telegram.png"></a>
+                    <a href="#"><img src="../assets/img/instagram.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--hero header-->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <p class="hero-header-title text-light mt-5 text-center d-none d-lg-block ">
+                    کانال ورود به عرصه توسعه وب
+                    <br>
+                    <br>
+                    دوره های تخصصی مبتنی بر طراحی و برنامه نویسی وب
+                </p>
+                <!-- search form-->
+                <form action="" class="rtl mt-5">
+                    <div class="input-group">
+                        <input class="form-control " type="text"
+                               placeholder="عبارت مورد نظر برای جستجو را وارد نمایید...">
+                        <div class="input-group-prepend">
+                            <input type="submit" class="btn btn-info" value="بگــرد">
+                        </div>
+                    </div>
+                </form>
+                <!--login registration btn section-->
+            </div>
+            <div class="col-8 text-center mt-5">
+                <a class="btn-login ml-4" href="#">
+                    <span class="btn-login-icon"><i class="material-icons">done</i></span>
+                    <span>ورود به سایت</span>
+                </a>
+                <a href="#" class="btn-register">
+                    <span class="btn-register-icon"><i class="material-icons">person_add</i></span>
+                    <span>ثبت نام در سایت</span>
+                </a>
+            </div>
+            <div class="col-8 text-center mt-5" id="meta-section">
+               <span class="ml-4">
+                   <span><i class="material-icons">supervisor_account</i></span>
+               <span class="text-white">500 نفر دانشجو</span>
+               </span>
+                <span class="ml-4">
+                <i class="material-icons ">library_books</i>
+                    <span class="text-white">1200 مقاله</span>
+                 </span>
+                <span class="ml-4">
+                <i class="material-icons ">school</i>
+                <span class="text-white">20 دوره آموزشی</span>
+                 </span>
+                <span class="ml-4">
+                <i class="material-icons ">access_time</i>
+                    <span class="text-white">1560 دقیقه آموزش</span>
+                 </span>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        $.simpleTicker($("#demo"), {
+            speed: 1000,
+            delay: 3000,
+            easing: 'swing',
+            effectType: 'fade'
+        });
+    </script>
+</div>
+<!--slider  & info section-->
+<div class="container custom-slider-container mt-4">
+    <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+            <div class="card text-white bg-warning shadow-sm">
+                <div class="card-header" style="padding: 9px;">
+                    <i class="material-icons" style="vertical-align: -7px">
+                        info
+                    </i> اطلاعیه ها
+                </div>
+                <div class="card-body" style="padding: 8px 12px 0px 12px;">
+                    <ul class="info-section px-0 py-0">
+                        <li class="mb-1 rounded bg-white text-dark">پیش ثبت نام دوره PHP<span
+                                class=" rounded float-left p-1">30 آبان 1398</span></li>
+                        <li class="mb-1 rounded bg-white text-dark">پیش ثبت نام دوره PHP<span
+                                class="rounded float-left p-1">30 آبان 1398</span></li>
+                        <li class="mb-1 rounded bg-white text-dark">پیش ثبت نام دوره PHP<span
+                                class=" rounded float-left p-1">30 آبان 1398</span></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-8 col-xl-8 mb-3">
+            <div id="myCarousel" class="carousel  slide carousel-fade shadow-sm" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active ">
+                        <img class="d-block w-100" src="../assets/img/slider1.jpg" alt="first image">
+                        <div class="carousel-caption">
+                            <p>دوره آموزش بوتسترپ 4</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/slider2.jpg" alt="second image">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="../assets/img/slider3.jpg" alt="third image">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--main content section-->
+<div class="container rounded-top mt-5" style="background: #2ecc71">
+    <div class="row">
+        <div class="col-12">
+            <p class="content-section-title text-center text-white m-0 p-2 "> عناوین آموزشی</p>
+
+        </div>
+    </div>
+</div>
+<div class="container custom-container-main-content rounded-bottom">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <div class="btn-group ml-3">
+                <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown">همه مطالب
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">همه مطالب</a>
+                    <a class="dropdown-item" href="#">مقالات آموزشی</a>
+                    <a class="dropdown-item" href="#">دوره های آموزشی</a>
+                    <a class="dropdown-item" href="#">بانک کد</a>
+                </div>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown">موضوعــات
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">طراحی وب</a>
+                    <a class="dropdown-item" href="#">برنامه نویسی</a>
+                    <a class="dropdown-item" href="#">گرافیک</a>
+                    <a class="dropdown-item" href="#">وردپرس</a>
+                </div>
+            </div>
+            <button class="btn btn-info float-left btn-filter-content">فیلــتر<i class="material-icons">
+                arrow_left
+            </i></button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">ویدئو</span>
+
+                <img src="../assets/img/a.jpg" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">مقاله</span>
+
+                <img src="../assets/img/b.png" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>غیر رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">مقاله</span>
+
+                <img src="../assets/img/g.jpg" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">مقاله</span>
+
+                <img src="../assets/img/d.png" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">مقاله</span>
+
+                <img src="../assets/img/f.png" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">مقاله</span>
+
+                <img src="../assets/img/f.png" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">مقاله</span>
+
+                <img src="../assets/img/f.png" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3 mt-4">
+            <div class="card position-relative content-card">
+                <span class="badge badge-danger position-absolute new-post-badge  rounded text-white">new</span>
+                <span class="position-absolute post-type rounded text-white">مقاله</span>
+
+                <img src="../assets/img/g.jpg" class="card-img-top">
+                <div class="card-body">
+                    <a href="#" class="card-title" style="height: 100px">آموزش طراحی وب</a>
+                    <span class="float-left mt-1">30 آبان 1398</span>
+                </div>
+                <div class="card-footer p-1 text-center custom-card-footer">
+                    <ul class="list-inline p-0 m-0 post-meta">
+                        <li class="list-inline-item"><span class="text-danger"><i class="material-icons ml-1">file_copy
+</i>رایگان</span></li>
+                        <li class="list-inline-item">21<i class="material-icons mr-1">comment</i></li>
+                        <li class="list-inline-item">45<i class="material-icons mr-1">visibility</i></li>
+                        <li class="list-inline-item">12<i class="material-icons mr-1">thumb_up_alt</i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-left">
+        <a href="#" class="btn btn-outline-success m-4">همه مطالب آموزشی...</a>
+    </div>
+</div>
+<!--feature section-->
+<div class="container mt-4 p-0">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="panel mt-3 rounded shadow-sm bg-white">
+                <div class="panel-title mb-3 text-center">پیشرفت دوره های آموزشی</div>
+                <div class="panel-body">
+                    <div class="progress-bar-title">فریم ورک بوتسترپ </div>
+                    <div class="progress  mb-2" style="height: 10px">
+                        <div class="progress-bar bg-success" style="width: 30%"></div>
+                    </div>
+                    <div class="progress-bar-title">دوره PHP</div>
+                    <div class="progress  mb-2" style="height: 10px">
+                        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                             style="width: 60%"></div>
+                    </div>
+                    <div class="progress-bar-title">طراحی وب</div>
+                    <div class="progress  mb-2" style="height: 10px">
+                        <div class="progress-bar bg-info" style="width: 45%"></div>
+                    </div>
+                    <div class="progress-bar-title">دوره وردپرس</div>
+                    <div class="progress  mb-2" style="height: 10px">
+                        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+                             style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="panel mt-3 rounded shadow-sm  bg-white">
+                <div class="panel-title mb-1 text-center">نظرات دانشجویان</div>
+                <div class="panel-body">
+                    <div id="comments-slider" class="carousel  slide carousel-fade" data-ride="carousel">
+                        <!-- <ol class="carousel-indicators">
+                             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                             <li data-target="#myCarousel" data-slide-to="1"></li>
+                             <li data-target="#myCarousel" data-slide-to="2"></li>
+                         </ol>-->
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active ">
+                                <div class="panel-header rounded">
+                                    <img class="rounded-circle" src="../assets/img/favicon.png" width="54" height="54">
+                                    <span>دوره طراحی وب</span>
+                                </div>
+                                <p class="user-comment-details text-justify">
+                                    دوره بسیار خوب و با کیفیتی است
+                                </p>
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="panel-header rounded">
+                                    <img class="rounded-circle" src="../assets/img/logo.png" width="54" height="54">
+                                    <span>دوره طراحی وب</span>
+                                </div>
+                                <p class="user-comment-details text-justify">
+                                    به نظر من همه چیز دوره خوب بود
+                            </div>
+                            <div class="carousel-item ">
+                                <div class="panel-header rounded">
+                                    <img class="rounded-circle" src="../assets/img/favicon.png" width="54" height="54">
+                                    <span>دوره طراحی وب</span>
+                                </div>
+                                <p class="user-comment-details text-justify">
+                                    بهترین دوره ای که تا به حال دیدم
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="panel mt-3 rounded shadow-sm bg-white">
+                <div class="panel-title mb-1 text-center">تماس با ما</div>
+                <div class="panel-body">
+                    <form class="rtl">
+                        <div class="input-group mb-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text custom-input-group-text">نــام</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="نام خود را وارد نمایید...">
+                        </div>
+                        <div class="input-group mb-1">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text custom-input-group-text">ایمـیل</span>
+                            </div>
+                            <input class="form-control" type="text" placeholder="ایمیل خود را وارد نمایید...">
+                        </div>
+
+                        <textarea type="text" class="form-control mb-2" placeholder="پیـــام شما ..."
+                                  cols="6"></textarea>
+                        <input type="submit" class="btn btn-success btn-sm btn-block" style="    margin-bottom: 3px;"
+                               value="ارسال پیــام">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--newsletter section-->
+<div class="container-fluid mt-4" style="background: #3498db">
+    <div class="row justify-content-center">
+        <div class="col-6">
+
+            <form action="" class="rtl p-4">
+                <p class="text-white text-center newsletter-title"><i class="material-icons">
+                    notifications_active
+                </i>برای اطلاع از آخرین آموزش ها در خبر نامه عضو شوید</p>
+                <div class="input-group">
+                    <input class="form-control " type="text"
+                           placeholder="ایمیل معتبر خود را وارد نمایید...">
+                    <div class="input-group-prepend">
+                        <input type="submit" class="btn btn-warning" value="اشتراک">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--footer section-->
+<div class="container-fluid" style="background: #383838">
+    <div class="row">
+        <div class="col-12">
+            <div class="copy-right text-center text-white p-3">تمام فعالیت های وب سایت ما حسب مورد تابع قوانین جمهوری
+                اسلامی ایران می باشد
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
